@@ -1,0 +1,82 @@
+.image-logo {
+    width: 600px;
+    margin-top: 20px;
+}
+
+body {
+    background-color: lightgoldenrodyellow; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 10%; 
+    padding: 5px;
+    text-align: center;
+}
+
+.column img {
+    width: 80%;
+    height: auto; 
+    display:flex; 
+    flex-direction: column
+    margin: 3px auto; 
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+.column:nth-child(5) img,
+.column:nth-child(6) img {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.row {
+    content: "";
+    display: table;
+    clear: both;
+    display:flex; 
+}
+
+.column img:hover,
+.column img:active {
+    transform: scale(1.1); 
+    filter: brightness(80%); 
+}
+
+h1 {
+    font-family: Arial, sans-serif; 
+    color: rgb(123, 169, 184);
+    font-style: italic;
+}
+
+.social-label {
+    font-family: Arial, sans-serif; 
+    font-size: 12px;
+}
+
+p {
+    color: rgb(255, 96, 123);
+    text-align: center;
+    font-weight: bold;
+    font-size: smaller;
+}
+
+@media (min-width: 600px) {
+    .image-container {
+        align-items: start;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 900px) {
+    .container {
+        grid-template-columns: repeat(6, 1fr);
+    }
